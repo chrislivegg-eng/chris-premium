@@ -1,30 +1,40 @@
 :root {
-  --primary: #e50914;
-  --bg: #000;
-  --card: #141414;
-  --gold: #f5c518;
-  --text: #fff;
+  /* Nueva Paleta Morado Neon */
+  --primary: #a855f7;
+  --bg: #0a0a0c;
+  --card: #16161e;
+  --accent: #bf94ff;
+  --text: #ffffff;
+  --green: #2ecc71;
+  --yellow: #f1c40f;
 }
+
 body {
   background: var(--bg);
   color: var(--text);
   font-family: sans-serif;
   margin: 0;
 }
+
 header {
   text-align: center;
   padding: 25px;
-  background: #111;
+  background: #0f0f14; /* Un tono ligeramente más claro que el bg */
   border-bottom: 2px solid var(--primary);
+  box-shadow: 0 4px 15px rgba(168, 85, 247, 0.2); /* Resplandor neón */
 }
+
 h1 {
   color: var(--primary);
   margin: 0;
   font-size: 1.8rem;
+  text-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
 }
+
 .subtitle {
-  color: #888;
+  color: var(--accent); /* Cambiado de gris a un tono del acento */
   font-size: 0.8rem;
+  opacity: 0.8;
 }
 
 .container {
@@ -32,16 +42,19 @@ h1 {
   max-width: 1000px;
   margin: 0 auto;
 }
+
 .category-title {
   border-left: 4px solid var(--primary);
   padding-left: 10px;
   margin: 30px 0 15px;
+  color: var(--text);
 }
 
 /* Control de Páginas */
 .page {
   display: none;
 }
+
 .page.active {
   display: block;
   animation: slideUp 0.3s ease-out;
@@ -58,18 +71,25 @@ h1 {
   background: var(--card);
   border-radius: 12px;
   padding: 15px;
-  border: 1px solid #222;
+  border: 1px solid #2a2a35; /* Borde sutil para resaltar en el fondo negro */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  border-color: var(--accent);
 }
 
 .featured {
-  border: 1px solid var(--gold);
+  border: 1px solid var(--yellow);
+  box-shadow: 0 0 10px rgba(241, 196, 15, 0.2);
 }
+
 .badge {
-  background: var(--gold);
+  background: var(--yellow);
   color: #000;
   font-size: 0.6rem;
   font-weight: bold;
@@ -91,11 +111,12 @@ h1 {
 h2 {
   font-size: 1rem;
   margin-bottom: 8px;
-  color: #fff;
+  color: var(--text);
 }
+
 p {
   font-size: 0.75rem;
-  color: #888;
+  color: #a0a0b0; /* Gris azulado para leer mejor sobre oscuro */
   margin: 0;
   min-height: 2.5rem;
   display: flex;
@@ -107,8 +128,9 @@ p {
   font-size: 1.4rem;
   font-weight: bold;
   margin: 10px 0;
-  color: #fff;
+  color: var(--accent); /* Resalta el precio con el morado claro */
 }
+
 .icon-plus {
   font-size: 2.5rem;
   color: var(--primary);
@@ -118,8 +140,8 @@ p {
 /* Botones */
 .btn-buy,
 .btn-more {
-  background: #25d366;
-  color: white;
+  background: var(--green); /* Usa la variable --green definida */
+  color: #000; /* Texto negro sobre verde brillante suele leerse mejor */
   text-decoration: none;
   padding: 10px;
   border-radius: 6px;
@@ -129,13 +151,18 @@ p {
   width: 100%;
   box-sizing: border-box;
 }
+
 .btn-more {
-  background: #333;
+  background: #2a2a35;
+  color: var(--text);
 }
+
 .btn-nav {
   cursor: pointer;
   border: 1px dashed var(--primary);
+  background: rgba(168, 85, 247, 0.05);
 }
+
 .btn-back {
   background: var(--primary);
   border: none;
@@ -153,35 +180,42 @@ p {
   flex-direction: column;
   gap: 8px;
 }
+
 .list-item {
-  background: #111;
+  background: var(--card);
   padding: 15px;
   border-radius: 10px;
-  border: 1px solid #222;
+  border: 1px solid #2a2a35;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .info {
   display: flex;
   flex-direction: column;
   gap: 2px;
 }
+
 .name {
   font-weight: bold;
   font-size: 0.9rem;
 }
+
 .desc {
   font-size: 0.7rem;
-  color: #888;
+  color: #a0a0b0;
 }
+
 .price-mini {
-  color: var(--gold);
+  color: var(--yellow);
   font-size: 1.1rem;
+  font-weight: bold;
 }
+
 .btn-mini {
-  background: #25d366;
-  color: #fff;
+  background: var(--green);
+  color: #000;
   text-decoration: none;
   padding: 8px 15px;
   border-radius: 5px;
