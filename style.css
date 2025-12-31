@@ -1,0 +1,207 @@
+:root {
+  --primary: #e50914;
+  --bg: #000;
+  --card: #141414;
+  --gold: #f5c518;
+  --text: #fff;
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: sans-serif;
+  margin: 0;
+}
+header {
+  text-align: center;
+  padding: 25px;
+  background: #111;
+  border-bottom: 2px solid var(--primary);
+}
+h1 {
+  color: var(--primary);
+  margin: 0;
+  font-size: 1.8rem;
+}
+.subtitle {
+  color: #888;
+  font-size: 0.8rem;
+}
+
+.container {
+  padding: 15px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.category-title {
+  border-left: 4px solid var(--primary);
+  padding-left: 10px;
+  margin: 30px 0 15px;
+}
+
+/* Control de Páginas */
+.page {
+  display: none;
+}
+.page.active {
+  display: block;
+  animation: slideUp 0.3s ease-out;
+}
+
+/* SIMETRÍA PERFECTA */
+.grid-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 15px;
+  border: 1px solid #222;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.featured {
+  border: 1px solid var(--gold);
+}
+.badge {
+  background: var(--gold);
+  color: #000;
+  font-size: 0.6rem;
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 4px;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #fff;
+}
+p {
+  font-size: 0.75rem;
+  color: #888;
+  margin: 0;
+  min-height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.price {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #fff;
+}
+.icon-plus {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 5px;
+}
+
+/* Botones */
+.btn-buy,
+.btn-more {
+  background: #25d366;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 0.8rem;
+  border: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+.btn-more {
+  background: #333;
+}
+.btn-nav {
+  cursor: pointer;
+  border: 1px dashed var(--primary);
+}
+.btn-back {
+  background: var(--primary);
+  border: none;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Lista de Combos */
+.grid-full {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.list-item {
+  background: #111;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.name {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+.desc {
+  font-size: 0.7rem;
+  color: #888;
+}
+.price-mini {
+  color: var(--gold);
+  font-size: 1.1rem;
+}
+.btn-mini {
+  background: #25d366;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-main {
+    grid-template-columns: 1fr 1fr;
+  }
+}
